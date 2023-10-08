@@ -1,39 +1,50 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# The Big Feed
 
-Welcome,
+I’ve created a web-based application to help users discover recipes based on the ingredients they have to hand. You are able to view this [here](insert_link).
 
-This is the Code Institute student template for Codeanywhere. If you are using Gitpod then you need [this template](https://github.com/Code-Institute-Org/gitpod-full-template) instead.  We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+## Business Goals
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Codeanywhere and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **August 30th, 2023**
+The business goals for the portfolio are as follows:
 
-## Codeanywhere Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere, in the terminal, type:
-
-`python3 -m http.server`
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-To run a frontend (HTML, CSS, Javascript only) application in Codeanywhere with no-cache, you can use this alias for `python3 -m http.server`.
-
-`http_server`
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A button should appear to click: _Open Preview_ or _Open Browser_.
-
-In Codeanywhere you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to _Account Settings_ in the menu under your avatar.
-2. Scroll down to the _API Key_ and click _Reveal_
-3. Copy the key
-4. In Codeanywhere, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- **Personalised Recipe Recommendations:** The application uses the Spoonacular API to retrieve recipes based on the ingredients the user inputs, aiming to offer a diverse range of recipes to suit tastes and dietary preferences.
+- **Reduce Food Waste:** By suggesting recipes based on the user’s available ingredients, the application helps to make the most of what's leftover in the kitchen, while also promoting sustainability.
+- **Enhance Cooking Creativity:** The application aims to encourage culinary exploration and creativity. The recipe suggestions aim to inspire users to try new dishes and cooking techniques, helping them expand their culinary repertoire.
 
 ---
 
-Happy coding!
+## First Time User Stories
+
+- As a first-time user, I want to be able to easily input the ingredients I have on hand, so the application can suggest recipes that I can make with those ingredients.
+- As a first-time user, I want to see a step-by-step guide for the recommended recipes, including ingredients, cooking instructions, and estimated preparation time.
+- As a first-time user, I want the application to suggest recipes based on the time I have available to cook, such as quick and easy recipes for busy weeknights or more elaborate dishes for special occasions.
+
+## Returning User Stories
+
+- As a returning user, I want to have the option to edit and customize my dietary preferences and cooking skill level in my profile settings, ensuring that the recipe recommendations remain aligned with my evolving tastes and abilities.
+- As a returning user, I want to be able to search for specific recipes or ingredients within the application's database, allowing me to quickly find and access recipes I'm interested in cooking again.
+- As a returning user, I want the ability to create multiple meal plans for different occasions (e.g., weekly meal plan, special event menu).
+
+---
+
+## UX
+
+I designed the portfolio using the core principles of UX. I used this framework to think about my target users and what features would be present on the website.
+
+## Strategy
+
+**The Big Feed** is aimed at the following users:
+
+- **Home Cooks:** The primary audience is likely to be individuals who enjoy cooking at home and are looking for convenient ways to plan meals and discover new recipes.
+- **Food Enthusiasts:** People who have a passion for food, cooking, and trying out different cuisines may be interested in using the app to expand their culinary repertoire.
+- **Busy Professionals and Families:** Those with busy schedules who need help with meal planning and utilizing ingredients on hand efficiently. Families seeking to create diverse and satisfying meals may also find the app useful.
+- **Health-Conscious Consumers:** Individuals who are mindful of their dietary preferences and restrictions, including vegetarians, vegans, gluten-free, or other dietary choices.
+- **Sustainability Advocates:** People who are environmentally conscious and want to reduce food waste by using up ingredients they already have.
+
+### These users would be looking for the following
+
+- **Search and Filtering Options:** Users should be able to search for recipes based on ingredients, dietary preferences (e.g., vegetarian, gluten-free), and difficulty levels. Advanced filtering options allow users to refine their search results.
+- **User-Friendly Recipe Cards:** Each recipe should be presented in an easy-to-read format, including a list of ingredients, clear step-by-step instructions, cooking time, serving size, and nutritional information.
+- **Personalised Recommendations:** The website should offer personalised recipe recommendations based on user preferences and ingredients they have on hand. This feature keeps users engaged and encourages exploration.
+- **Mobile Responsiveness:** The website should be optimised for mobile devices to ensure a seamless experience for users who access it from smartphones or tablets.
+
+I want to keep the website simple as well as intuitive. I want the interface to be visually appealing as well as user-friendly in the best possible way so that the user is able to understand the purpose of the website straight away.
