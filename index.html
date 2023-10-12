@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Link to Bootstrap CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css">
-    <!-- Link to Font Awesome CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-        type="text/css">
-    <!-- Link to Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
-    <!-- Link to stylesheet -->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>The Big Feed</title>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Link to Bootstrap CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css">
+        <!-- Link to Font Awesome CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            type="text/css">
+        <!-- Link to Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+        <!-- Link to stylesheet -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>The Big Feed</title>
+    </head>
 
-<body>
-    <header>
-        <!-- Bootstrap code for navbar -->
-        <nav class="navbar navbar-light navbar-expand-lg">
-            <a href="index.html" id="name" class="navbar-brand"><em>The Big Feed</em></a>
-        </nav>
-    </header>
-        <!-- Bootstrap code for navbar -->
-    <div class="container">
-        <div class="search-container">
-            <input type="text" placeholder="Type A Dish Name Here.." id="user-inp" />
-            <button id="search-btn">Search</button>
+    <body>
+        <header>
+            <!-- Bootstrap code for navbar -->
+            <nav class="navbar navbar-light navbar-expand-lg">
+                <a href="index.html" id="name" class="navbar-brand"><em>The Big Feed</em></a>
+            </nav>
+        </header>
+        <!-- User inputs dish into search field -->
+        <div class="container">
+            <div class="search-container">
+                <input type="text" placeholder="Type A Dish Name Here.." id="user-inp" />
+                <button id="search-btn">Search</button>
+            </div>
+            <!-- Search results -->
+            <div id="result"></div>
         </div>
-        <div id="result"></div>
-    </div>
-    <!-- Javascript link -->
-    <script src="assets/js/script.js"></script>
-</body>
+        <!-- Javascript link -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
 
 </html>
