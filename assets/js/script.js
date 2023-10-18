@@ -6,7 +6,7 @@ $(document).ready(function () {
             let settings = {
                 async: true,
                 crossDomain: true,
-                url: `https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=${userInp}`,
+                url: `https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=${encodeURIComponent(userInp)}`,
                 method: 'GET',
                 headers: {
                     'X-RapidAPI-Key': '459369c516mshfa57b82cae3e3b3p1b41a1jsn79b5694f966a',
