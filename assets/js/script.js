@@ -11,8 +11,8 @@ $(document).ready(function () {
                     q: userInp, // Use the q parameter for searching by name or ingredient
                     from: 0,    // Add other optional parameters as needed
                     size: 20,
-                }
-                method: 'GET'
+                },
+                method: 'GET',
                 headers: {
                     'X-RapidAPI-Key': '459369c516mshfa57b82cae3e3b3p1b41a1jsn79b5694f966a',
                     'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
