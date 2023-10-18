@@ -15,15 +15,12 @@ $(document).ready(function () {
             };
 
             $.ajax(settings).done(function (response) {
-                // Handle the API response here
+                // Handle the API response 
                 if (response && response.length > 0) {
                     // Process the data and update page
-                    const resultContainer = $("#result");
+                    let resultContainer = $("#result");
 
-                    // Clear previous results
-                    resultContainer.empty();
-
-                    // Display the response, e.g., as a list
+                    // Display the response as a list
                     const resultList = $("<ul>");
                     response.forEach(function (item) {
                         const listItem = $("<li>").text(item.name);
@@ -32,7 +29,7 @@ $(document).ready(function () {
 
                     resultContainer.append(resultList);
                 } else {
-                    // Handle the case where no results were found
+                    // If no results are found
                     const resultContainer = $("#result");
                     resultContainer.html("<p>No recipes found for the given ingredient</p>");
                 }
