@@ -8,6 +8,7 @@
 
 body {
     background-image: url(../images/pepper.jpg);
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, .4);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -29,6 +30,16 @@ body {
     position: relative;
     z-index: 2;
 }
+
+.about {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:300;
+    font-size: 20px;
+    color: #fafafa;
+    margin: 70px;
+    text-align: center;
+        }
+
 
 /* Search box */
 
