@@ -36,11 +36,11 @@ body {
     font-size: 16px;
     padding: 3em 2.8em;
     width: 90vw;
-    max-width: 90vw;
+    max-width: 40vw;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-    top: 100%;
+    top: 50%;
     border-radius: 0.6em;
 }
 
@@ -81,6 +81,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin: 5px;
 }
 
 .recipe-image {
@@ -96,4 +97,3 @@ body {
     text-decoration: none;
     color: #333;
 }
-
