@@ -52,7 +52,7 @@ $(document).ready(function () {
                                 const recipeInfo = $("<div>")
                                     .addClass("recipe-info");
 
-                                if (item.description !== null) {
+                                if (item.description !== null && item.description.trim() !== "") {
                                     recipeInfo.text(`Description: ${item.description}`);
                                 } else {
                                     recipeInfo.text("Click the video link to find out more.");
