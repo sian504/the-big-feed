@@ -19,7 +19,7 @@ $(document).ready(function () {
 
             //Function to check for recipes that match user input and filter results for those with video instructions
 
-            const resultContainer = $(".recipe-cards"); 
+            const resultContainer = $(".recipe-cards");
 
             $.ajax(settings)
                 .done(function (response) {
@@ -36,10 +36,10 @@ $(document).ready(function () {
                                 // Create a recipe card for each result
                                 const recipeCard = $("<div>").addClass("recipe-card");
 
-                                // Recipe image 
+                                // Recipe image
                                 const recipeImage = $("<img>")
                                     .addClass("recipe-image")
-                                    .attr("src", "https://example.com/recipe-image.jpg")
+                                    .attr("src", item.thumbnail_url)
                                     .attr("alt", item.name);
 
                                 // Recipe name as a clickable link to the video
@@ -57,7 +57,7 @@ $(document).ready(function () {
                                 recipeCard.append(recipeImage, videoLink, recipeInfo);
                                 resultContainer.append(recipeCard);
                             });
-                                //Error handling
+                            //Error handling
                         } else {
                             resultContainer.html("<p>No recipes with video links found for the given ingredient</p>");
                         }
