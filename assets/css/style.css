@@ -36,11 +36,11 @@ body {
     font-size: 16px;
     padding: 3em 2.8em;
     width: 90vw;
-    max-width: 40em;
+    max-width: 90vw;
     position: absolute;
     transform: translate(-50%, -50%);
     left: 50%;
-    top: 50%;
+    top: 100%;
     border-radius: 0.6em;
 }
 
@@ -69,19 +69,18 @@ body {
 
 /* Recipe cards */
 
-
 .recipe-cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
+    justify-content: center;
 }
 
 .recipe-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    width: 300px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .recipe-image {
@@ -96,33 +95,5 @@ body {
 .recipe-card a {
     text-decoration: none;
     color: #333;
-}
-
-.recipe-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* Adjust the card width as needed */
-    gap: 20px;
-    /* Adjust the gap between cards as needed */
-    justify-content: center;
-    /* Center the grid horizontally */
-}
-
-.recipe-card {
-    background-color: #f7f7f7;
-    /* Change the background color as desired */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    /* Add a shadow effect */
-}
-
-.recipe-image {
-    max-width: 100%;
-    height: auto;
-}
-
-.recipe-info {
-    margin-top: 10px;
 }
 
