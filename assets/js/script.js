@@ -1,6 +1,9 @@
 $(document).ready(function () {
+    //Onclick function for search button that starts the API call 
     $("#search-btn").on("click", function () {
         const userInp = $("#user-inp").val().trim();
+
+        //Tasty API settings
 
         if (userInp !== "") {
             const settings = {
@@ -14,7 +17,9 @@ $(document).ready(function () {
                 }
             };
 
-            const resultContainer = $(".recipe-cards"); // Define result container
+            //Function to check for recipes that match user input and filter results for those with video instructions
+
+            const resultContainer = $(".recipe-cards"); 
 
             $.ajax(settings)
                 .done(function (response) {
@@ -31,7 +36,7 @@ $(document).ready(function () {
                                 // Create a recipe card for each result
                                 const recipeCard = $("<div>").addClass("recipe-card");
 
-                                // Recipe image (you can use item.poster_url or other image source)
+                                // Recipe image 
                                 const recipeImage = $("<img>")
                                     .addClass("recipe-image")
                                     .attr("src", "https://example.com/recipe-image.jpg")
@@ -43,7 +48,7 @@ $(document).ready(function () {
                                     .attr("target", "_blank")
                                     .text(item.name);
 
-                                // Additional information (e.g., description)
+                                // Additional information 
                                 const recipeInfo = $("<div>")
                                     .addClass("recipe-info")
                                     .text(`Description: ${item.description}`);
@@ -52,6 +57,7 @@ $(document).ready(function () {
                                 recipeCard.append(recipeImage, videoLink, recipeInfo);
                                 resultContainer.append(recipeCard);
                             });
+                                //Error handling
                         } else {
                             resultContainer.html("<p>No recipes with video links found for the given ingredient</p>");
                         }
