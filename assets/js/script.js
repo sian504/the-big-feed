@@ -1,17 +1,12 @@
 $(document).ready(function () {
     $("#search-btn").on("click", function () {
-        const userInp = $("#user-inp").val();
+        const userInp = $("#user-inp").val().trim();
 
-        if (userInp.trim() !== "") {
-            let settings = {
+        if (userInp !== "") {
+            const settings = {
                 async: true,
                 crossDomain: true,
-                url: "https://tasty.p.rapidapi.com/recipes/list",
-                data: {
-                    q: userInp, // q parameter for searching by name or ingredient
-                    from: 0,    // Required parameters
-                    size: 20,
-                },
+                url: `https://tasty.p.rapidapi.com/recipes/list?q=${userInp}&from=0&size=20`,
                 method: 'GET',
                 headers: {
                     'X-RapidAPI-Key': '459369c516mshfa57b82cae3e3b3p1b41a1jsn79b5694f966a',
@@ -19,28 +14,44 @@ $(document).ready(function () {
                 }
             };
 
-            const resultContainer = $("#result"); 
+            const resultContainer = $("#result"); // Define result container once
 
-            $.ajax(settings).done(function (response) {
-                // Handle the API response 
-                if (response && response.length > 0) {
-                    // Process the data and update page
-                    let resultContainer = $("#result");
+            $.ajax(settings)
+                .done(function (response) {
+                    if (response.results && response.results.length > 0) {
+                        // Filter recipes with video links
+                        const recipesWithVideos = response.results.filter(function (item) {
+                            return item.renditions && item.renditions.length > 0;
+                        });
 
-                    // Display the response as a list
-                    let resultList = $("<ul>");
-                    response.forEach(function (item) {
-                        let listItem = $("<li>").text(item.name);
-                        resultList.append(listItem);
-                    });
+                        if (recipesWithVideos.length > 0) {
+                            const resultList = $("<ul>");
+                            recipesWithVideos.forEach(function (item) {
+                                const listItem = $("<li>");
 
-                    resultContainer.append(resultList);
-                } else {
-                    // If no results are found
-                    let resultContainer = $("#result");
-                    resultContainer.html("<p>No recipes found for the given ingredient</p>");
-                }
-            });
+                                // Create a clickable link for the video
+                                const videoLink = $("<a>")
+                                    .attr("href", item.renditions[0].url) // Assuming the first rendition is the video link
+                                    .attr("target", "_blank")
+                                    .text(item.name);
+
+                                listItem.append(videoLink);
+                                resultList.append(listItem);
+                            });
+
+                            // Clear previous results and display the new results
+                            resultContainer.empty().append(resultList);
+                        } else {
+                            resultContainer.html("<p>No recipes with video links found for the given ingredient</p>");
+                        }
+                    } else {
+                        resultContainer.html("<p>No recipes found for the given ingredient</p>");
+                    }
+                })
+                .fail(function (xhr, status, error) {
+                    // Handle AJAX request errors, e.g., display an error message to the user
+                    resultContainer.html("<p>An error occurred while fetching data.</p>");
+                });
         }
     });
 });
