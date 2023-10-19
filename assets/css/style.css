@@ -1,0 +1,30 @@
+/* Add your own CSS styles for the recipe cards */
+.recipe-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.recipe-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.recipe-info {
+    margin-top: 10px;
+}
+
+.recipe-card a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Add more CSS styles as needed for your design */

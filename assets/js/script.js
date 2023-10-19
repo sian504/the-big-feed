@@ -14,33 +14,44 @@ $(document).ready(function () {
                 }
             };
 
-            const resultContainer = $("#result"); // Define result container once
+            const resultContainer = $(".recipe-cards"); // Define result container
 
             $.ajax(settings)
                 .done(function (response) {
                     if (response.results && response.results.length > 0) {
-                        // Filter recipes with video links
                         const recipesWithVideos = response.results.filter(function (item) {
                             return item.renditions && item.renditions.length > 0;
                         });
 
                         if (recipesWithVideos.length > 0) {
-                            const resultList = $("<ul>");
-                            recipesWithVideos.forEach(function (item) {
-                                const listItem = $("<li>");
+                            // Clear previous results
+                            resultContainer.empty();
 
-                                // Create a clickable link for the video
+                            recipesWithVideos.forEach(function (item) {
+                                // Create a recipe card for each result
+                                const recipeCard = $("<div>").addClass("recipe-card");
+
+                                // Recipe image (you can use item.poster_url or other image source)
+                                const recipeImage = $("<img>")
+                                    .addClass("recipe-image")
+                                    .attr("src", "https://example.com/recipe-image.jpg")
+                                    .attr("alt", item.name);
+
+                                // Recipe name as a clickable link to the video
                                 const videoLink = $("<a>")
-                                    .attr("href", item.renditions[0].url) // Assuming the first rendition is the video link
+                                    .attr("href", item.renditions[0].url)
                                     .attr("target", "_blank")
                                     .text(item.name);
 
-                                listItem.append(videoLink);
-                                resultList.append(listItem);
-                            });
+                                // Additional information (e.g., description)
+                                const recipeInfo = $("<div>")
+                                    .addClass("recipe-info")
+                                    .text(`Description: ${item.description}`);
 
-                            // Clear previous results and display the new results
-                            resultContainer.empty().append(resultList);
+                                // Append elements to the recipe card
+                                recipeCard.append(recipeImage, videoLink, recipeInfo);
+                                resultContainer.append(recipeCard);
+                            });
                         } else {
                             resultContainer.html("<p>No recipes with video links found for the given ingredient</p>");
                         }
@@ -49,7 +60,6 @@ $(document).ready(function () {
                     }
                 })
                 .fail(function (xhr, status, error) {
-                    // Handle AJAX request errors, e.g., display an error message to the user
                     resultContainer.html("<p>An error occurred while fetching data.</p>");
                 });
         }
