@@ -62,7 +62,7 @@ $(document).ready(function () {
                                 recipeCard.append(recipeImage, videoLink, recipeInfo);
                                 resultContainer.append(recipeCard);
                             });
-                            //Error handling
+                                //Error handling
                         } else {
                             resultContainer.html("<p>No recipes with video links found for the given ingredient</p>");
                         }
