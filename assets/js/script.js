@@ -48,10 +48,15 @@ $(document).ready(function () {
                                     .attr("target", "_blank")
                                     .text(item.name);
 
-                                // Additional information 
+                                // Recipe description
                                 const recipeInfo = $("<div>")
-                                    .addClass("recipe-info")
-                                    .text(`Description: ${item.description}`);
+                                    .addClass("recipe-info");
+
+                                if (item.description !== null) {
+                                    recipeInfo.text(`Description: ${item.description}`);
+                                } else {
+                                    recipeInfo.text("Click the video link to find out more.");
+                                }
 
                                 // Append elements to the recipe card
                                 recipeCard.append(recipeImage, videoLink, recipeInfo);
