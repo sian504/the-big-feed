@@ -30,6 +30,9 @@ body {
     z-index: 2;
 }
 
+/* Home page text and CTA button */
+
+
 .about {
     font-family: 'Montserrat', sans-serif;
     font-weight:300;
@@ -38,7 +41,6 @@ body {
     margin: 70px;
     text-align: center;
         }
-
 
 /* Search box */
 
