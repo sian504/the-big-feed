@@ -1,6 +1,8 @@
-$(document).ready(function () {
+jQuery(document).ready(function ($) {
     //Onclick function for search button that starts the API call 
-    $("#search-btn").on("click", function () {
+    $("#search-btn").on("click", function (event) {
+        event.preventDefault(); // Prevent the form from being submitted
+
         const userInp = $("#user-inp").val().trim();
 
         //Tasty API settings
@@ -62,7 +64,7 @@ $(document).ready(function () {
                                 recipeCard.append(recipeImage, videoLink, recipeInfo);
                                 resultContainer.append(recipeCard);
                             });
-                                //Error handling
+                            //Error handling
                         } else {
                             resultContainer.html("<p>No recipes with video links found for the given ingredient</p>");
                         }
