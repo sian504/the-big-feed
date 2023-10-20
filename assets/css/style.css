@@ -15,21 +15,6 @@ body {
     background-color: #464646;
 }
 
-/* Headers */
-
-#name {
-    color: #ffffff;
-    font-weight: 100;
-    font-size: 50px;
-    text-align: center;
-    color: #fafafa;
-}
-
-.navbar {
-    position: relative;
-    z-index: 2;
-}
-
 /* Home page text and CTA button */
 
 
@@ -113,4 +98,16 @@ body {
 .recipe-card a:hover {
     color: #0066cc;
     text-decoration: underline; 
+}
+
+/*@media screen and (max-width: 768px) {
+    .container {
+        width: 80vw;
+        max-width: 80vw;
+        position: absolute;
+        left: 10%;
+        /* Adjust left position for the desired left margin
+        top: 30vh;
+        /* Adjust top position for the desired vertical position */
+    }
 }
