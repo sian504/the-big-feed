@@ -8,7 +8,7 @@
     <!-- Link to Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css">
     <!-- Link to Font Awesome CDN -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         type="text/css">
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
@@ -20,8 +20,27 @@
 <body>
     <header>
         <!-- Bootstrap code for navbar -->
-        <nav class="navbar navbar-light navbar-expand-lg">
-            <a href="index.html" id="name" class="navbar-brand"><em>The Big Feed <i class="fa fa-cutlery" aria-hidden="true"></i></em></a>
+        <!--<nav class="navbar navbar-light navbar-expand-lg">
+                <a href="index.html" id="name" class="navbar-brand"><em>The Big Feed <i class="fa fa-cutlery"
+                            aria-hidden="true"></i></em></a>
+            </nav>-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="index.html"><em>The Big Feed <i class="fa fa-cutlery" aria-hidden="true"></i></em></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="recipe.html">Recipe Seach</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
     <br>
@@ -29,20 +48,25 @@
     <br>
     <div class="about">
         <p>
-            Welcome to The Big Feed, your go-to destination for culinary inspiration! Working in conjunction with Tasty.co our site is here to make your 
+            Welcome to The Big Feed, your go-to destination for culinary inspiration! Working in conjunction with
+            Tasty.co our site is here to make your
             cooking journey delightful and effortless.
-            
-            Simply type your main ingredient—be it chicken, salmon, or aubergine—into the search bar, and watch the magic happen. We'll provide you with a
-            selection of mouthwatering recipes tailored to your choice. Each recipe comes with a handy video link, allowing you to
-            follow along and master the art of creating culinary delights. It's cooking made easy, right at your fingertips!
-                <br>
-                <br>
-            Feeling hungry? Click the button below to find your next favourite dish! 
+
+            Simply type your main ingredient—be it chicken, salmon, or aubergine—into the search bar, and watch the
+            magic happen. We'll provide you with a
+            selection of mouthwatering recipes tailored to your choice. Each recipe comes with a handy video link,
+            allowing you to
+            follow along and master the art of creating culinary delights. It's cooking made easy, right at your
+            fingertips!
+            <br>
+            <br>
+            Feeling hungry? Click the button below to find your next favourite dish!
         </p>
         <a class="btn btn-light" target="_blank" href="recipe.html" role="button">Search for Recipes</a>
     </div>
     <!-- Javascript link -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
     <script src="assets/js/script.js"></script>
 </body>
 
