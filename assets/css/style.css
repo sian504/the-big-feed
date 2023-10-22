@@ -108,6 +108,19 @@ body {
     text-decoration: underline; 
 }
 
+/* Error messages */
+
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 /* Footer */
 
 footer {

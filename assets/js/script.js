@@ -67,10 +67,10 @@ jQuery(document).ready(function ($) {
                             });
                             //Error handling
                         } else {
-                            resultContainer.html("<p>No recipes with video links found for the given ingredient</p>");
+                            resultContainer.html('<p class="error-message">No recipes with video links found for the given ingredient</p>');
                         }
                     } else {
-                        resultContainer.html("<p>No recipes found for the given ingredient</p>");
+                        resultContainer.html('<p class="error-message">No recipes found for the given ingredient</p>');
                     }
                 })
                 //Code from JQuery (https://api.jquery.com/deferred.fail/)
