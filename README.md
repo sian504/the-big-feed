@@ -208,7 +208,7 @@ The reason for this is that I had a lot of issues with the IDE not pushing my up
 
 This meant that a lot of the building of the interface was left to the end of the project that it made more sense to do it at the end to try and save time. 
 
-I used [W3C Markup Validation Service]((<https://validator.w3.org/>)) to validate my HTML and [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate my CSS.
+I used [W3C Markup Validation Service](https://validator.w3.org) to validate my HTML and [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate my CSS.
 
 The errors found in each were as follows:
 
