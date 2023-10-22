@@ -6,11 +6,9 @@
 
 /* Nav bar */
 
-.nav-item.active {
+.nav-item.active .nav-link {
     background-color: #f4c531;
-    /* Background color for the active link */
     color: #333;
-    /* Text color for the active link */
 }
 
 /* Background Image */
