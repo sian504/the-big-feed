@@ -294,3 +294,34 @@ My mentor pointed out that Bootstraps Javascript to ensure the search button wor
 
 I searched for different ingredients to ensure that the API results were being rendered correctly to the page. Whilst doing this I noticed that some descriptions were coming through as a null value and being displayed in this way on the page. To fix this I added an if statement to insert a placeholder text of 'Click the video link to find out more' if the description came through as blank or null. 
 
+## Deployment
+
+The project is deployed using GitHub pages. This was achieved by completing the following steps:
+
+1. Navigate to the "Settings" tab in the GitHub repository.
+2. Select "Pages" from the menu on the left.
+3. Under the "Source" section, select "Deploy from a branch" and "Branch: main." Click on "Save."
+4. GitHub takes a short while to publish the website. Refresh the page, if not done automatically, and once the website is deployed, the URL will be displayed.
+
+### Forking the Github Repository
+
+If you want to make changes to your repository without affecting it, you can make a copy of it by 'Forking' it. This ensures your original repository remains unchanged.
+
+You can fork a GitHub Repository by completing the following steps:
+
+1. Find the GitHub repository.
+2. At the top of the page to the right, under your account, click the Fork button.
+3. You will now have a copy of the repository in your GitHub account.
+
+### Cloning the GitHub Repository
+
+Cloning your repository will allow you to download a local version of the repository. Cloning can also be a great way to backup your work.
+
+You can clone your repository by completing the following steps:
+
+1. Find the relevant GitHub repository
+2. Press the arrow on the Code button
+3. Copy the link that is shown in the drop-down
+4. Now open Gitpod & select the directory location where you would like the clone created
+5. In the terminal type 'git clone' & then paste the link you copied in GitHub
+6. Press enter and your local clone will be created.
