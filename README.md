@@ -180,6 +180,46 @@ To create this project I used the following:
 - [Balsamiq](https://balsamiq.cloud/sidwtio/poonp92/rD331) - Used to create the wireframes.
 - [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate all HTML written for the site.
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Validated all CSS code written for the site.
+- [JS Hint](https://jshint.com/) - Validated my JavaScript file to call the Tasty API. 
 - [AmIResponsive](https://ui.dev/amiresponsive) - Used to create the responsive image you see at the top of the README file.
 
 ---
+
+## Testing
+
+The project was deployed early to gather feedback throughout development and to find any bugs. I used Chrome Dev Tools to help test responsiveness.
+
+Chrome Dev Tools used to emulate the following devices: 
+
+- Apple iPhone SE
+- Apple iPhone XR
+- Apple iPhone 12 Pro
+- Google Pixel 5
+- Samsung Galaxy S8+
+
+The project was also manually tested on the iPhone 12 Pro Max and Samsung Galaxy 20FE.
+
+### HTML and CSS Validation
+
+In my previous milestone project I decided that I would not leave all the validation of my code until the end of the build and do this at various stages. I stil maintain that this is the optimal method to building a site; however, I did not do this and again left it until the end. 
+
+The reason for this is that I had a lot of issues with the IDE not pushing my updated code to Github or transferring to the browser when I wanted to view the changes. This took up a considerable amount of my time. Especially when working on the Javascript file. 
+
+This meant that a lot of the building of the interface was left to the end of the project that it made more sense to do it at the end to try and save time. 
+
+I used [W3C Markup Validation Service]((<https://validator.w3.org/>)) to validate my HTML and [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate my CSS.
+
+The errors found in each were as follows:
+
+#### index.html
+
+![Index Errors](assets/images/html-one.png)
+
+This was removed by taking out the slash that was at the end of the Google Fonts link. This was also removed from the recipe.html page as well. 
+
+#### recipe.html
+
+![Index Errors](assets/images/html-two.png)
+
+Once the Google Fonts link had been corrected there were no other errors to fix. 
+
