@@ -229,7 +229,7 @@ Once the Google Fonts link had been corrected there were no other errors to fix.
 
 My CSS file was clear of errors.
 
-#### JavaScript Validation
+### JavaScript Validation
 
 I used JSHint to check my JavaScript code. My first time parsing my code produced many warnings. 
 
@@ -237,7 +237,7 @@ I used JSHint to check my JavaScript code. My first time parsing my code produce
 
 All of these warnings were corrected by prefixing my code with the comments: /*jshint esversion: 6*/ and /*global jQuery*/
 
-Due to time constraints and a lack of experience, I was unable to effectively unit test my JavaScript. My workaround to this was using Chrome Dev Tools to trial and error.
+Due to time constraints and a lack of experience, I was unable to effectively unit test my JavaScript. My workaround to this was using Chrome Dev Tools.
 
 I started all my Javascript files with a process in mind:
 
@@ -251,3 +251,46 @@ My method for testing my functions was a simple process of trial and error. I tr
 - At this point, if it was still not working, I normally would look for advice, fortunately my mentor, Harry Dhillon, was invaluable in teaching me how to use the Network tab in Chrome Dev Tools which helped me a lot with targeting the correct keys in the API response to ensure the results were rendered successfully on the page.
 
 This method worked for a simple project; however, I would definitely like to to attempt some unit testing with JavaScript in the future.
+
+### API Test Calls
+
+Throughout the creation of my Javascript file, I would frequently test the Tasty API to ensure that my connection was still valid to rule it out when fixing errors. 
+
+The first time I did this, I relied heavily on the 
+[Tasty API documentation](https://rapidapi.com/blog/tasty-api-with-java-python-php-ruby-javascript-examples/), which was invaluable when setting up the first call and for testing the different endpoints to ensure I was getting the correct information.
+
+### Lighthouse
+
+Lighthouse is a feature of Chrome developer tools that performs an audit of any URL that it's given and returns an overall score based on website's performance. When I audited the site it returned this: 
+
+![Lighthouse Results](assets/images/lighthouse.png)
+
+Considering that I was close to the project deadline and that this was so close to a 'good' score, I decided that I would prioritise the documentation write up over improving this. To improve the Lighthouse score I would have reduced the size of the background image on the homepage slideshow by applying srcset. This would have decreased the time it takes for the slideshow to load. This is important in terms of performance as I believe the image slideshow would be the first contentful paint of the site and having this load quicker would contribute to a better user experience.
+
+I also think the use of the Tasty API would impact on the performance of the site. As the API is free to use, I believe this would impact on the performance of the site causing it to be slow.
+
+---
+
+## Known Bugs and Improvements
+
+### Cloud IDE Issue
+
+The most significant problem I had was the Cloud IDE that I was using was not pushing my updated code to the browser so that I could check my Javascript file. 
+
+This caused significant problems when trying to work out how to call the Tasty API and rendering the API results correctly on the browser. As I was using Chrome Dev Tools to do the majority of the testing it was extremely difficult to know whether the code that was running on the browser was the updated code. 
+
+From doing some playing around Dev Tools, I noticed that the Sources tab was displaying the code that was currently being run on the browser. This ensured that I could check for certain what version of my JavaScript was being run and could close and reopen my workspace if need be. This saved me a lot of time and API calls! 
+
+### Bootstrap Javascript interference
+
+When I first built my site, I was only using the navbar-brand class from Bootstrap and had the recipe search bar in the body. This was causing some issues when the search results were displayed as the search bar was obscuring the results. 
+
+To resolve this I decided to change the navbar class to a navbar class that contained a search bar. When I did this it caused an issue with calling the Tasty API. 
+
+My mentor pointed out that Bootstraps Javascript to ensure the search button worked in the navbar was blocking my onclick function on my Javascript file. I was able to fix this by including event.preventDefault(); on the event listener to block Bootstrap's default Javascript from running. I learned how to do this with the assistance of the 
+[JQuery site](https://api.jquery.com/event.preventDefault/#event-preventDefault).
+
+### Rendering Recipe Descriptions
+
+I searched for different ingredients to ensure that the API results were being rendered correctly to the page. Whilst doing this I noticed that some descriptions were coming through as a null value and being displayed in this way on the page. To fix this I added an if statement to insert a placeholder text of 'Click the video link to find out more' if the description came through as blank or null. 
+
