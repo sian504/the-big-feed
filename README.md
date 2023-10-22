@@ -75,6 +75,87 @@ The homepage will consist of a visually appealing image along with a short About
 I have linked the wireframes for each device below:
 
 - [Desktop](assets/wireframes/desktop.png)
-- [Tablet]
-- [Mobile]
+- [Tablet](assets/wireframes/tablet.png)
+- [Mobile](assets/wireframes/mobile.png)
 
+## Surface
+
+The website will be presented with a background hero image throughout. I decided to use one of my own images that I had taken myself as the image itself is quite colourful and suitable for the site's purpose. The nav bar will be a contrasting white colour and the text contained will be dark/grey to contrast the navbar. 
+
+The about paragraph text will be white to contrast the bright colours of the background image so this can be read clearly by the user.
+
+I will be using Poppins for all the text on the site. By using this font, my website will have a simple but professional feel to it.
+
+---
+
+## Features 
+
+The website was designed mobile-first as it is likely that users will be viewing this on their phone. There are 2 pages that are displayed in the order Homepage > Recipe Search. The colour theme is mostly white, green, red and yellow. All text has been given the font Poppins. The colour scheme and font have been used throughout for consistency.
+
+- Header and menu that allows users to navigate through all pages of the site
+- A visually appealing landing page that explains the purpose of the site
+- An easy to use search function that is intuitive and user friendly
+- Visually appealing recipe cards that give all the information the user needs to know about the dish 
+- Links to social media pages
+
+### Menu
+
+### Desktop View
+
+![Desktop view](assets/images/desktop-menu.png)
+
+### Small Screen View
+
+![Small screen view](assets/images/mobile-menu.jpeg)
+
+The header and menu items are positioned in the top left of the screen. It consists of 2 links on the desktop view of the landing page and the 2 links and the search bar on the recipe search page. This applies for small screen view but has been condensed into a hamburger menu.
+
+I chose this menu for the smaller screens as the text for the menu items was displaying as small and could have been an issue for users when trying to navigate.
+
+This satisfies the user story: As a first-time user, I want to be able to easily input the ingredients I have on hand, so the application can suggest recipes that I can make with those ingredients.
+
+### Landing Page
+
+![Landing Page](assets/images/landing-page.png)
+
+The landing page is a very simple webpage that contains the nav bar, heading and an about section that explains the purpose of the website and how the user can utilise the features. Underneath the text is a call-to-action button that invites users to navigate to the search page where they can search for recipes. 
+
+This also satisfies the user story: As a first-time user, I want to be able to easily input the ingredients I have on hand, so the application can suggest recipes that I can make with those ingredients.
+
+### Search Function
+
+![Search Function](assets/images/search.png)
+
+The search function is a simple search field contained within the navbar that the user can input their ingredient. The custom Javascript file has an event listener added to this to call the Tasty API to return search results.
+
+This also satisfies the user story: As a first-time user, I want to be able to easily input the ingredients I have on hand, so the application can suggest recipes that I can make with those ingredients.
+
+### Recipe Cards
+
+![Recipe Cards](assets/images/results.png)
+
+The recipe cards are the results of the API call from the Tasty API rendered in a simple text box complete with appealing image, recipe heading and description. The headings are hyperlinked and once clicked takes the user to a video that explains the ingredients and how to make the recipe. 
+
+The results show a variety of recipes suitable for the time available and the dietary preferences of the user.
+
+This satisfies the user stories: As a first-time user, I want to see a step-by-step guide for the recommended recipes, including ingredients, cooking instructions, and estimated preparation time.
+
+and
+
+As a first-time user, I want the application to suggest recipes based on the time I have available to cook, such as quick and easy recipes for busy weeknights or more elaborate dishes for special occasions.
+
+### Social Links
+
+![Social Links](assets/images/social-links.png)
+
+In the footer of each webpage, I have added 5 Font Awesome icons linking users to Instagram, Pinterest, YouTube, LinkedIn and GitHub so that the user can learn more about the site and keep up to date with new content.
+
+This satisfies the user story: As a returning user, I want to access the site's social media links, so I can follow their updates on different platforms and share this with my friends.
+
+### Responsiveness
+
+![Picture of the website on different devices](assets/images/responsive.png)
+
+The site is fully responsive on desktop, mobile and tablet allowing users to utilise the website wherever they are no matter what their device. 
+
+This satisfies the user story: As a returning user, I want to access the site's social media links, so I can follow their updates on different platforms and share this with my friends.
