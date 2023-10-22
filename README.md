@@ -182,6 +182,7 @@ To create this project I used the following:
 - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Validated all CSS code written for the site.
 - [JS Hint](https://jshint.com/) - Validated my JavaScript file to call the Tasty API. 
 - [AmIResponsive](https://ui.dev/amiresponsive) - Used to create the responsive image you see at the top of the README file.
+- [Tiny JPG](https://tinyjpg.com/) - Used to compress my background image for better load times.
 
 ---
 
@@ -265,7 +266,7 @@ Lighthouse is a feature of Chrome developer tools that performs an audit of any 
 
 ![Lighthouse Results](assets/images/lighthouse.png)
 
-Considering that I was close to the project deadline and that this was so close to a 'good' score, I decided that I would prioritise the documentation write up over improving this. To improve the Lighthouse score I would have reduced the size of the background image on the homepage slideshow by applying srcset. This would have decreased the time it takes for the slideshow to load. This is important in terms of performance as I believe the image slideshow would be the first contentful paint of the site and having this load quicker would contribute to a better user experience.
+Considering that I was close to the project deadline and that this was so close to a 'good' score, I decided that I would prioritise the documentation write up over improving this. To improve the Lighthouse score I compressed my image with Tiny JPG to improve the load time. 
 
 I also think the use of the Tasty API would impact on the performance of the site. As the API is free to use, I believe this would impact on the performance of the site causing it to be slow.
 
@@ -293,6 +294,8 @@ My mentor pointed out that Bootstraps Javascript to ensure the search button wor
 ### Rendering Recipe Descriptions
 
 I searched for different ingredients to ensure that the API results were being rendered correctly to the page. Whilst doing this I noticed that some descriptions were coming through as a null value and being displayed in this way on the page. To fix this I added an if statement to insert a placeholder text of 'Click the video link to find out more' if the description came through as blank or null. 
+
+---
 
 ## Deployment
 
@@ -325,3 +328,23 @@ You can clone your repository by completing the following steps:
 4. Now open Gitpod & select the directory location where you would like the clone created
 5. In the terminal type 'git clone' & then paste the link you copied in GitHub
 6. Press enter and your local clone will be created.
+
+---
+
+## Credits
+
+I have used a number of resources to produce this website, where code has been used found from another source this is credited as a comment within the HTML and CSS files.
+
+I was assisted by various resources including:
+
+[HTML Structuring](https://www.codewithrandom.com/2022/12/01/recipe-app-using-javascript/) This helped me to structure the HTML to ensure that I was targeting the right elements in my Javascript file.
+
+[Stopping Bootstrap default JS](https://api.jquery.com/event.preventDefault/#event-preventDefault) This page assisted with providing me with the right code to ensure the default Bootstrap Javascript in the navbar didn't impact on my JavaScript file to call the Tasty API.
+
+[Rendering API results](https://github.com/Code-Institute-Solutions/WorkingWithExternalResources/tree/master/03-DataAndTheDOM) - This was used to help target the correct data in the API response and render this correctly to the page.
+
+[Error handling](https://api.jquery.com/deferred.fail/) This was used to structure my error that would display if the site were not able to perform as expected. 
+
+Background image styling was assisted by [Stack Overflow](https://stackoverflow.com/questions/9182978/semi-transparent-color-layer-over-background-image) and [Medium](https://medium.com/@miguelznunez/how-to-easily-add-an-image-overlay-to-your-images-with-css-e354a79f530d) to ensure that the transparent layer was applied and adjusted correctly. 
+
+---

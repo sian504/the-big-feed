@@ -1,7 +1,7 @@
 jQuery(document).ready(function ($) {
     //Onclick function for search button that starts the API call 
     $("#search-btn").on("click", function (event) {
-        event.preventDefault(); // Prevent the form from being submitted
+        event.preventDefault(); // Prevent the form from being submitted - Assited by JQuery - (https://api.jquery.com/event.preventDefault/#event-preventDefault)
 
         const userInp = $("#user-inp").val().trim();
 
@@ -20,6 +20,7 @@ jQuery(document).ready(function ($) {
             };
 
             //Function to check for recipes that match user input and filter results for those with video instructions
+            //Code to render API results to page was assisted by Code Institute (https://github.com/Code-Institute-Solutions/WorkingWithExternalResources/tree/master/03-DataAndTheDOM)
 
             const resultContainer = $(".recipe-cards");
 
@@ -72,6 +73,7 @@ jQuery(document).ready(function ($) {
                         resultContainer.html("<p>No recipes found for the given ingredient</p>");
                     }
                 })
+                //Code from JQuery (https://api.jquery.com/deferred.fail/)
                 .fail(function (xhr, status, error) {
                     resultContainer.html("<p>An error occurred while fetching data.</p>");
                 });
