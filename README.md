@@ -159,3 +159,27 @@ This satisfies the user story: As a returning user, I want to access the site's 
 The site is fully responsive on desktop, mobile and tablet allowing users to utilise the website wherever they are no matter what their device. 
 
 This satisfies the user story: As a returning user, I want to access the site's social media links, so I can follow their updates on different platforms and share this with my friends.
+
+---
+
+## What I used
+
+To create this project I used the following:
+
+- [HTML](https://www.w3schools.com/html/html_intro.asp) - The coding language used to create the structure of the website.
+- [CSS](https://www.w3schools.com/css/css_intro.asp)  -The coding language used to style the site throughout.
+- [Javascript](https://www.w3schools.com/js/js_intro.asp) - The coding language used for all the interactive components of the website. I used Bootstrap, JQuery and my own Javascript script within this project.
+- [Tasty API](https://rapidapi.com/apidojo/api/tasty/) - The API used to access the recipes and video links suggested in the search results.
+- [JQuery](https://jquery.com/) - The Javascript library used to write my script to call the Tasty API.
+- [Google Fonts](https://fonts.google.com/) - Fonts for both the headers and the body text were taken from here. The font I used is Poppins.
+- [Font Awesome](https://fontawesome.com/search) - Used for the header and social media icons in the footer.
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) - Used to test responsiveness across the site.
+- [GitHub](https://github.com/) - Used as a storage space for my pushed code.
+- [Git](https://git-scm.com/) - Used for version control to make commits and push to GitHub.
+- [CodeAnywhere](https://app.codeanywhere.com/) - The cloud development environment I used to build the site.
+- [Balsamiq](https://balsamiq.cloud/sidwtio/poonp92/rD331) - Used to create the wireframes.
+- [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate all HTML written for the site.
+- [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Validated all CSS code written for the site.
+- [AmIResponsive](https://ui.dev/amiresponsive) - Used to create the responsive image you see at the top of the README file.
+
+---
