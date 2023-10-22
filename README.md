@@ -348,3 +348,7 @@ I was assisted by various resources including:
 Background image styling was assisted by [Stack Overflow](https://stackoverflow.com/questions/9182978/semi-transparent-color-layer-over-background-image) and [Medium](https://medium.com/@miguelznunez/how-to-easily-add-an-image-overlay-to-your-images-with-css-e354a79f530d) to ensure that the transparent layer was applied and adjusted correctly. 
 
 ---
+
+## Acknowledgements
+
+I would like to thank my mentor, Harry Dhillon for all of his support and guidance through the creation of this project.
