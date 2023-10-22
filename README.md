@@ -162,7 +162,7 @@ This satisfies the user story: As a returning user, I want to access the site's 
 
 ---
 
-## What I used
+## What I Used
 
 To create this project I used the following:
 
@@ -223,3 +223,31 @@ This was removed by taking out the slash that was at the end of the Google Fonts
 
 Once the Google Fonts link had been corrected there were no other errors to fix. 
 
+#### CSS Validation
+
+![CSS Errors](assets/images/css-valid.png)
+
+My CSS file was clear of errors.
+
+#### JavaScript Validation
+
+I used JSHint to check my JavaScript code. My first time parsing my code produced many warnings. 
+
+![JSHint Errors](assets/images/jshint.png)
+
+All of these warnings were corrected by prefixing my code with the comments: /*jshint esversion: 6*/ and /*global jQuery*/
+
+Due to time constraints and a lack of experience, I was unable to effectively unit test my JavaScript. My workaround to this was using Chrome Dev Tools to trial and error.
+
+I started all my Javascript files with a process in mind:
+
+- Create Variables for the HTML elements.
+- Write functions relating to those elements.
+
+My method for testing my functions was a simple process of trial and error. I tried to write my functions, save and check the results. If the desired result was not produced, my process to resolve this was the following:
+
+- Check Chrome dev tools for any errors in the console. This was the easiest starting point. It gave me a clear indication of where the errors were.
+- If the Dev Tools console gave no error, and the functions still did not work, I re-checked the function.
+- At this point, if it was still not working, I normally would look for advice, fortunately my mentor, Harry Dhillon, was invaluable in teaching me how to use the Network tab in Chrome Dev Tools which helped me a lot with targeting the correct keys in the API response to ensure the results were rendered successfully on the page.
+
+This method worked for a simple project; however, I would definitely like to to attempt some unit testing with JavaScript in the future.
