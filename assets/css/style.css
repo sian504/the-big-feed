@@ -25,7 +25,6 @@ body {
 
 /* Home page text and CTA button */
 
-
 .about {
     font-family: 'Montserrat', sans-serif;
     font-weight:300;
@@ -108,7 +107,7 @@ body {
     text-decoration: underline; 
 }
 
-/* ----------------------------------------Footer */
+/* Footer */
 
 footer {
     background-color: #008000;
